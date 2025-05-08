@@ -12,10 +12,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//기본키값 설정
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String username;
     private String password;
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 }
